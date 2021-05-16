@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
     <head>
+<link rel="manifest" href="/manifest.json">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="red"
    >
@@ -114,10 +116,10 @@ body is emitting light of frequency f which passes through square slit of width 
 <br>
 <br>
 find frequency variation with time
-assume initial frequency to be<math><msub>
+assume initial frequency to be<msub>
     <mi> f</mi>
     <mn> 0</mn>
-</msub></math >
+</msub>
 <br>
 <br>
 find intensity Variation of Central 
@@ -331,8 +333,15 @@ first: low resources initial pop. is
  find carrying capacity K ,x,t</em>
     </div>
     <hr>
-    <em>if you like my work you may donate me through paytm/phonepe<br>
-    mobile no. 8750636777</em>
-    
+    if you like my work you may donate me through paytm/phonepe<br>
+    mobile no. 8750636777
+    <script>
+window.addEventListener("load", () => {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+  }
+});
+    </script>
     </body>
+    
 </html>
