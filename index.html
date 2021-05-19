@@ -1,16 +1,37 @@
 <!doctype html>
 <html>
     <head>
+<link rel="manifest" href="./physics.json">
+<link rel="apple-touch-icon" href="./logo.png">
+<title>physicsworld</title>
+<meta name="keywords" content="olympiad,physics,math,chemistry,biology,computer science">
 
+<meta name="description" content="solve challenging problems and Read amazing articles on physics chemistry math biology computer science">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="violet"
-   >
+
+<meta name="theme-color" content="red">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js">
 </script>
    <style>
+svg{
+       margin-left:30%;
+       margin-top:40px;
+   }
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: white; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+ 
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
    .challenge{
        color:red;
    }
@@ -43,16 +64,21 @@
            color:white;
            text-decoration:none;
        }
-
+a:hover{
+border:1px white solid;
+           border-radius:2px;
+    color:red;
+    background-color:white;
+}
        
    </style>
    </head>
-    <body>
+    <body  >
         <nav>
             <header>
        &#20;&#20;&#20;&#20;&#20;&#20;
-                <button>
-                    &int;
+                <button onclick="nab()">
+                    &#9776;
                 </button>
        &#20;&#20;&#20;&#20;&#20;&#20;
             
@@ -60,26 +86,28 @@
             </header>
             
        &#20;&#20;&#20;&#20;&#20;&#20;
-               <main><a       style="
-           border:1px white solid;
-           border-radius:2px;
-           background-color:white;
-           color:red;"
-               href="#"><em>home</em></a>&#20;&#20;     &#20;&#20;&#20;&#20;&#20;&#20;
+               <main><a      
+               href="index.html"><em>home</em></a>&#20;&#20;     &#20;&#20;&#20;&#20;&#20;&#20;
             
-            <a href="./about.html">about</a>&#20;&#20;&#20;     &#20;&#20;&#20;&#20;&#20;&#20;
+            <a href="about.html">about</a>&#20;&#20;&#20;     &#20;&#20;&#20;&#20;&#20;&#20;
             <a href="physics.html">physics</a>&#20;&#20;&#20; &#20;&#20;&#20;&#20;&#20;&#20;
             <a href="math.html">math</a>
 &#20;&#20; &#20;&#20;&#20;&#20;&#20;&#20;
       
-            <a href="chemistry.html">chemistry</a>
+            <a href="./chemistry.html">chemistry</a>
 &#20;&#20; &#20;&#20;&#20;&#20;&#20;&#20;
       
  
-            <a href="biology.html">biology</a></main>
+            <a href="./biology.html">biology</a>
+&#20;&#20; &#20;&#20;&#20;&#20;&#20;&#20;
+     
+  
+            <a href="computerscience.html">computer science</a>
+            
         </nav>
-        <br >
-        date:15/5/2021
+
+        
+       date:15/5/2021
         <hr>
     <em class="challenge">
 #physics challenge problem
@@ -116,10 +144,10 @@ body is emitting light of frequency f which passes through square slit of width 
 <br>
 <br>
 find frequency variation with time
-assume initial frequency to be<msub>
+assume initial frequency to be<math><msub>
     <mi> f</mi>
     <mn> 0</mn>
-</msub>
+</msub></math>
 <br>
 <br>
 find intensity Variation of Central 
@@ -334,8 +362,87 @@ first: low resources initial pop. is
     </div>
     <hr>
     if you like my work you may donate me through paytm/phonepe<br>
-    mobile no. 8750636777
-   
+    mobile no. 8750636777 
+
+    <div  id="side" class="sidenav">
+        <main style="height:50px;background-color:red;color:white;display:flex;">
+            physicsworld
+            &#20;&#20;&#20;
+            <button style="margin-left:100px" onclick="back()">x</button>
+        </main>
+        '
+ <a style="color:black" href="#">
+     jee main/advance
+     </a><hr>
+ <a style="color:black" href="#">
+     neet
+ </a><hr>
+ <a style="color:black" href="#">
+     international math olympiad
+     </a><hr>
+ <a style="color:black" href="#">
+     international physics olympiad</a><hr>
+ <a style="color:black" href="#">
+     international biology Olympiad
+     </a><hr>
+ <a style="color:black" href="#">
+     international chemistry olympiad</a><hr>
+    
+ <a style="color:black" href="#">
+     international olympiad of informatics</a><hr>
+    
+ <a style="color:black" href="#">
+     international astronomy olympiad</a><hr>
+
+ <a style="color:black" href="#">
+     isi bmath entrance</a><hr>
+     
+ <a style="color:black" href="#">
+     Kvpy</a><hr>
+     
+    </div>
+    <button id="Hello">hjji</button>
+    <script>
+function nab(){ 
+document.getElementById('side').style= 'width:250px';}
+function back(){ 
+document.getElementById('side').style= 'width:0px';}
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw10.js')
+  .then(function(registration) {
+  
+  })
+  .catch(error=> {
+    alert(error);
+  });
+}
+const button = document.getElementById('Hello');
+button.addEventListener('click', () => {
+  Notification.requestPermission().then((result) => {
+    if (result === 'granted') {
+      randomNotification();
+    }
+  });
+})
+
+function randomNotification() {
+  const randomItem = Math.floor(Math.random() * games.length);
+  const notifTitle = 'h';
+  const notifBody = `Created by `;
+  
+  const options = {
+    body: notifBody
+  };
+  new Notification(notifTitle, options);
+  setTimeout(randomNotification, 30000);
+}
+
+
+    </script>
+    
+
+
     </body>
     
 </html>
