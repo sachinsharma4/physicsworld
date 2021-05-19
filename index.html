@@ -411,7 +411,7 @@ document.getElementById('side').style= 'width:0px';}
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw10.js')
   .then(function(registration) {
-  
+return registration;
   })
   .catch(error=> {
     alert(error);
@@ -434,7 +434,7 @@ function randomNotification() {
   const options = {
     body: notifBody
   };
-  new Notification(notifTitle, options);
+  registration.showNotification(notifTitle, options);
  
 }
 
