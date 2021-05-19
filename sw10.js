@@ -5,9 +5,6 @@ const cacheName = 'cache-v1';
 const precacheResources = [
 '/', 
 'index.html',
-'computerscience.html',
-'rachelcarson.png',
-'logo.png',
 'physics.html',
 'biology.html',
 'math.html',
