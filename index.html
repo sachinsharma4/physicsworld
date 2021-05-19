@@ -427,7 +427,7 @@ button.addEventListener('click', () => {
 })
 
 function randomNotification() {
-  const randomItem = Math.floor(Math.random() * games.length);
+  
   const notifTitle = 'h';
   const notifBody = `Created by `;
   
@@ -435,7 +435,7 @@ function randomNotification() {
     body: notifBody
   };
   new Notification(notifTitle, options);
-  setTimeout(randomNotification, 30000);
+ 
 }
 
 
